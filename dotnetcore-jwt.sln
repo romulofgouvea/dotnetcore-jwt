@@ -1,13 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26124.0
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30406.217
 MinimumVisualStudioVersion = 15.0.26124.0
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "jwt.Application", "jwt.Application\jwt.Application.csproj", "{5B490FC8-186D-49B8-B963-FDCB7A337429}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "jwt.Application", "jwt.Application\jwt.Application.csproj", "{5B490FC8-186D-49B8-B963-FDCB7A337429}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "jwt.Data.Infra", "jwt.Data.Infra\jwt.Data.Infra.csproj", "{4640BCE6-0306-42AC-935B-ADB1EC71F284}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "jwt.Data.Infra", "jwt.Data.Infra\jwt.Data.Infra.csproj", "{4640BCE6-0306-42AC-935B-ADB1EC71F284}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "jwt.Domain", "jwt.Domain\jwt.Domain.csproj", "{5CD3F552-2ECE-4DF0-9838-5950D66A27F9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "jwt.Domain", "jwt.Domain\jwt.Domain.csproj", "{5CD3F552-2ECE-4DF0-9838-5950D66A27F9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "jwt.Services", "jwt.Services\jwt.Services.csproj", "{C4FFD134-4D2B-4A43-B8D3-CAF436745D08}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,9 +19,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 		Release|x64 = Release|x64
 		Release|x86 = Release|x86
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{5B490FC8-186D-49B8-B963-FDCB7A337429}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -58,5 +57,23 @@ Global
 		{5CD3F552-2ECE-4DF0-9838-5950D66A27F9}.Release|x64.Build.0 = Release|Any CPU
 		{5CD3F552-2ECE-4DF0-9838-5950D66A27F9}.Release|x86.ActiveCfg = Release|Any CPU
 		{5CD3F552-2ECE-4DF0-9838-5950D66A27F9}.Release|x86.Build.0 = Release|Any CPU
+		{C4FFD134-4D2B-4A43-B8D3-CAF436745D08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4FFD134-4D2B-4A43-B8D3-CAF436745D08}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4FFD134-4D2B-4A43-B8D3-CAF436745D08}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{C4FFD134-4D2B-4A43-B8D3-CAF436745D08}.Debug|x64.Build.0 = Debug|Any CPU
+		{C4FFD134-4D2B-4A43-B8D3-CAF436745D08}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{C4FFD134-4D2B-4A43-B8D3-CAF436745D08}.Debug|x86.Build.0 = Debug|Any CPU
+		{C4FFD134-4D2B-4A43-B8D3-CAF436745D08}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4FFD134-4D2B-4A43-B8D3-CAF436745D08}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4FFD134-4D2B-4A43-B8D3-CAF436745D08}.Release|x64.ActiveCfg = Release|Any CPU
+		{C4FFD134-4D2B-4A43-B8D3-CAF436745D08}.Release|x64.Build.0 = Release|Any CPU
+		{C4FFD134-4D2B-4A43-B8D3-CAF436745D08}.Release|x86.ActiveCfg = Release|Any CPU
+		{C4FFD134-4D2B-4A43-B8D3-CAF436745D08}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B24FE19B-A1DE-4D3B-BE6F-1D76504144D4}
 	EndGlobalSection
 EndGlobal

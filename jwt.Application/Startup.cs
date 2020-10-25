@@ -1,5 +1,8 @@
+using jwt.Application.Configuration;
+using jwt.Services.Configuration;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -18,6 +21,15 @@ namespace jwt.Application
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+
+            // Setting DBContexts
+            services.AddDatabaseConfiguration(Configuration);
+
+            //Swagger Config
+            services.AddSwaggerConfiguration();
+
+            //DI
+            services.AddDependencyInjectionConfiguration();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -27,6 +39,12 @@ namespace jwt.Application
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseCors(c =>
+                c.AllowAnyOrigin()
+                .AllowAnyMethod()
+                .AllowAnyHeader()
+            );
+
             app.UseHttpsRedirection();
 
             app.UseRouting();
@@ -35,8 +53,15 @@ namespace jwt.Application
 
             app.UseEndpoints(endpoints =>
             {
+                endpoints.MapGet("/", async context =>
+                {
+                    await context.Response.WriteAsync("Application started!");
+                });
+
                 endpoints.MapControllers();
             });
+
+            app.UseSwaggerSetup();
         }
     }
 }
